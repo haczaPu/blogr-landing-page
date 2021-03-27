@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+
+  body {
+    font-family: "Overpass", sans-serif;
+    font-size: 1.6rem;
+
+    header {
+      max-width: 1440px;
+      min-height: 600px;
+      background: url("../images/bg-pattern-intro.svg") top -1350px left -450px no-repeat,
+        linear-gradient(90deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+      background-size: 220%, 100%;
+      // background-position: -450px -1350px, 0 0;
+      // background-size: contain;
+      // background-origin: center;
+      margin: auto;
+      padding: 6rem 16.5rem;
+      border-radius: 0 0 0 100px;
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+
+        .dropdown {
+          width: 20%;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+
+          .product,
+          .company,
+          .connect {
+            position: relative;
+            button {
+              font-weight: 700;
+              color: white;
+              background: none;
+              border: none;
+              outline: none;
+              cursor: pointer;
+              &:hover {
+                text-decoration: underline 2px;
+              }
+              &:focus + ul {
+                opacity: 1;
+                pointer-events: all;
+                transform: translateY(0px);
+              }
+              img {
+                padding-left: 0.2rem;
+              }
+            }
+            ul {
+              width: 170px;
+              margin-top: 1rem;
+              position: absolute;
+              background-color: white;
+              border-radius: 0.5rem;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-around;
+              padding: 3rem;
+              list-style: none;
+              opacity: 0;
+              pointer-events: none;
+              transform: translateY(-10px);
+              transition: all 0.4s ease;
+            }
+            li {
+              width: 100%;
+              padding: 0.5rem;
+              &:hover {
+                font-weight: 900;
+              }
+              a {
+                color: hsl(208, 49%, 24%);
+                text-decoration: none;
+              }
+            }
+          }
+        }
+        button {
+          color: white;
+          width: 140px;
+          height: 50px;
+          border: none;
+          border-radius: 25px;
+          background: none;
+          outline: none;
+          cursor: pointer;
+          font-weight: 700;
+          &:last-child {
+            background-color: rgb(255, 255, 255);
+            color: hsl(356, 100%, 66%);
+          }
+        }
+      }
+
+      .intro {
+        display: flex;
+        min-height: 200px;
+        margin-top: 11.5rem;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+        font-family: "Overpass", sans-serif;
+
+        h1 {
+          font-size: 6.4rem;
+        }
+        h2 {
+          font-size: 2.1rem;
+          font-weight: 300;
+          margin-top: 20px;
+        }
+        .intro-btns {
+          display: flex;
+
+          button {
+            font-family: "Ubuntu", sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            background-color: white;
+            color: hsl(356, 100%, 66%);
+            width: 140px;
+            height: 50px;
+            border: none;
+            border-radius: 25px;
+            outline: none;
+            cursor: pointer;
+            margin-right: 0.8rem;
+            margin-top: 45px;
+
+            &:last-child {
+              color: white;
+              border: 2px solid white;
+              background: none;
+              margin-left: 0.8rem;
+            }
+          }
+        }
+      }
+    }
+
+    main {
+      max-width: 1440px;
+      padding: 120px 0 0 0;
+      overflow: hidden;
+      margin: auto;
+
+      section {
+        position: relative;
+        min-height: 1100px;
+        width: 100%;
+
+        &:nth-child(2) {
+          width: 100%;
+          min-height: 400px;
+          background: linear-gradient(90deg, hsl(237, 17%, 21%), #3e4067);
+          color: white;
+        }
+        h2 {
+          color: hsl(208, 49%, 24%);
+          text-align: center;
+          font-size: 4rem;
+          font-weight: 700;
+        }
+        .editor-desktop {
+          padding-top: 150px;
+          background-color: aquamarine;
+          width: 50%;
+
+          article {
+            color: hsl(237, 23%, 32%);
+            padding-left: 16.5rem;
+            h3 {
+              font-size: 29px;
+              font-weight: 700;
+            }
+            p {
+              padding-top: 4rem;
+            }
+          }
+          img {
+            position: absolute;
+            overflow: hidden;
+            left: 800px;
+            top: -40px;
+          }
+        }
+      }
+    }
+
+    footer {
+      background-color: hsl(240, 10%, 16%);
+      max-width: 1440px;
+      min-height: 50vh;
+      margin: auto;
+      border-radius: 0 100px 0 0;
+      color: white;
+    }
+  }
+}
