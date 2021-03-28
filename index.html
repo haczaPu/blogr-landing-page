@@ -15,43 +15,45 @@
 </head>
 <body>
   <header>
-    <nav>
-      <div class="logo"><img src="images/logo.svg"></div>
-      <div class="dropdown">
-        <div class="product">
-          <button>Product<img src="./images/icon-arrow-light.svg"></button>
-          <ul>
-            <li><a href="#">Overview</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Marketplace</a></li>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Integrations</a></li>
-          </ul>
-        </div>
-        <div class="company">
-          <button>Company<img src="./images/icon-arrow-light.svg"></button>
-          <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Team</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Careers</a></li>
-          </ul>
-        </div>
-        <div class="connect">
-          <button>Connect<img src="./images/icon-arrow-light.svg"></button>
-          <ul>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Newsletter</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">LinkedIn</a></li>
-          </ul>
+    <div class="header--container">
+      <img src="images/logo.svg" alt="logo" height="100%">
+      <div class="header__buttons">
+        <nav>
+          <div class="product">
+            <button>Product<img src="./images/icon-arrow-light.svg"></button>
+            <ul>
+              <li><a href="#">Overview</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Marketplace</a></li>
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Integrations</a></li>
+            </ul>
+          </div>
+          <div class="company">
+            <button>Company<img src="./images/icon-arrow-light.svg"></button>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Team</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+          <div class="connect">
+            <button>Connect<img src="./images/icon-arrow-light.svg"></button>
+            <ul>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Newsletter</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">LinkedIn</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="sign-up-btns">
+          <button>Login</button>
+          <button>Sign Up</button>
         </div>
       </div>
-      <div class="sign-up-btns">
-        <button>Login</button>
-        <button>Sign Up</button>
-      </div>
-    </nav>
+    </div>
     <div class="intro">
       <h1>A modern publishing platform</h1>
       <h2>Grow your audience and build your online brand</h2>
@@ -59,7 +61,6 @@
         <button>Start for Free</button>
         <button>Learn More</button>
       </div>
-      <!-- <img  src="images/bg-pattern-intro.svg" alt="bg-pattern-intro"/> -->
     </div>
   </header>
   <main>
@@ -80,61 +81,70 @@
             by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
           </p>
         </article>
-        <img src="./images/illustration-editor-desktop.svg" ref="editor-desktop" />
+        <figure class="editor-desktop__illustration"></figure>
       </div>
     </section>
+
+
     <section>
-      <h2>State of the Art Infrastructure</h2>
-      With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity.
-      This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+      <figure class="bg-pattern-circle"></figure>
+      <img src="images/illustration-phones.svg" alt="phones"></img>
+      <article>
+        <h2>State of the Art Infrastructure</h2>
+        <p>
+          With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity.
+          This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+        </p>
+      </article>
     </section>
+
+
     <section>
-    <section>
-      Free, open, simple
-      Blogr is a free and open source application backed by a large community of helpful developers. It supports
-      features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools,
-      and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
-    </section>
-    <section>
-      Powerful tooling
-      Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
-      capable of producing even the most complicated sites.
-    </section>
+      <figure class="laptop__illustration"></figure>
+      <article>
+        <h3>Free, open, simple</h3>
+        <p>Blogr is a free and open source application backed by a large community of helpful developers. It supports
+          features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools,
+          and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+        </p>
+        <h3>Powerful tooling</h3>
+        <p>Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+          capable of producing even the most complicated sites.
+        </p>
+      </article>
     </section>
   </main>
   <footer>
-    <div class="logo"><img src="images/logo.svg"></div>
-  Product
-
-  Overview
-  Pricing
-  Marketplace
-  Features
-  Integrations
-
-  Company
-
-  About
-  Team
-  Blog
-  Careers
-
-  Connect
-
-  Contact
-  Newsletter
-  LinkedIn
-
+    <div class="footer--container">
+      <img class="logo" src="images/logo.svg" alt="logo">
+      <div class="footer__lists">
+        <ul>Product
+          <li><a href="#">Overview</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Marketplace</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Integrations</a></li>
+        </ul>
+        <ul>Company
+          <li><a href="#">About</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+        <ul>Connect
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Newsletter</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
     <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Challenge by <a href="https://www.frontendmentor.io/challenges/blogr-landing-page-EX2RLAApP" target="_blank">Frontend Mentor</a>.
       Coded by <a href="#">Wojciech Grabowski</a>.
     </div>
-
   </footer>
 
-
-
-
-
+  <script src="./index.js"></script>
 </body>
 </html>
