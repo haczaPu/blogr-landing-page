@@ -1,5 +1,20 @@
 const allDropDownTitles = document.querySelectorAll(".dropdown-title");
 const allDropDownButtons = document.querySelectorAll(".dropdown-btn");
+const hamIcon = document.querySelector("#ham-icon");
+const closeIcon = document.querySelector("#close-icon");
+const headerBtns = document.querySelector(".header__buttons");
+
+hamIcon.addEventListener("click", () => {
+  hamIcon.style.display = "none";
+  closeIcon.style.display = "block";
+  headerBtns.style.display = "block";
+});
+
+closeIcon.addEventListener("click", () => {
+  hamIcon.style.display = "block";
+  closeIcon.style.display = "none";
+  headerBtns.style.display = "none";
+});
 
 allDropDownButtons.forEach(btn => {
   btn.addEventListener("click", toggleDropdown);

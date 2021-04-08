@@ -17,10 +17,20 @@
   <header>
     <div class="header--container">
       <img src="images/logo.svg" alt="logo" height="100%">
+      <div>
+        <img id="ham-icon" src="images/icon-hamburger.svg" alt="icon-hamburger"/>
+        <img id="close-icon" src="images/icon-close.svg" alt="icon-close" />
+      </div>
       <div class="header__buttons">
         <nav>
           <div class="dropdown-btn">
-            <div class="dropdown-title">Product<img src="./images/icon-arrow-light.svg" class="arrow"></div>
+            <div class="dropdown-title">Product
+              <div class="arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7">
+                  <path fill="none" stroke="white" stroke-width="2" d="M1 1l4 4 4-4"/>
+                </svg>
+              </div>
+            </div>
             <ul class="dropdown-list">
               <li><a href="#">Overview</a></li>
               <li><a href="#">Pricing</a></li>
@@ -30,7 +40,13 @@
             </ul>
           </div>
           <div class="dropdown-btn">
-            <div class="dropdown-title">Company<img src="./images/icon-arrow-light.svg" class="arrow"></div>
+            <div class="dropdown-title">Company
+              <div class="arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7">
+                  <path fill="none" stroke="white" stroke-width="2" d="M1 1l4 4 4-4"/>
+                </svg>
+              </div>
+            </div>
             <ul  class="dropdown-list">
               <li><a href="#">About</a></li>
               <li><a href="#">Team</a></li>
@@ -39,7 +55,13 @@
             </ul>
           </div>
           <div class="dropdown-btn">
-            <div class="dropdown-title">Connect<img src="./images/icon-arrow-light.svg" class="arrow"></div>
+            <div class="dropdown-title">Connect
+              <div class="arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7">
+                  <path fill="none" stroke="white" stroke-width="2" d="M1 1l4 4 4-4"/>
+                </svg>
+              </div>
+            </div>
             <ul class="dropdown-list">
               <li><a href="#">Contact</a></li>
               <li><a href="#">Newsletter</a></li>
@@ -67,6 +89,7 @@
     <section>
       <h2>Designed for the future</h2>
       <div class="editor-desktop">
+        <figure class="editor-desktop__illustration"></figure>
         <article>
           <h3>Introducing an extensible editor</h3>
           <p>
@@ -81,7 +104,6 @@
             by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
           </p>
         </article>
-        <figure class="editor-desktop__illustration"></figure>
       </div>
     </section>
 
