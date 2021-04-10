@@ -1,4 +1,5 @@
 @import "./breakpoints";
+@import "./variables";
 
 * {
   margin: 0;
@@ -12,14 +13,14 @@ html {
   body {
     font-family: "Overpass", sans-serif;
     font-size: 1.6rem;
-    background-color: #fafafa;
+    background-color: white;
 
     header {
       width: 100%;
       max-width: 1440px;
       height: 600px;
       background: url("../images/bg-pattern-intro.svg") top -1350px left -450px no-repeat,
-        linear-gradient(90deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+        linear-gradient(90deg, $bg-very-light-red, $bg-light-red);
       background-size: 220%, 100%;
       margin: auto;
       padding: 6rem 16.5rem;
@@ -27,7 +28,7 @@ html {
 
       @include breakpoint(tablet) {
         background: url("../images/bg-pattern-intro.svg") top 0px left 0px no-repeat,
-          linear-gradient(90deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+          linear-gradient(90deg, $bg-very-light-red, $bg-light-red);
         background-size: 300%, 100%;
         background-position: center, 0;
         padding: 6rem 3rem;
@@ -36,7 +37,7 @@ html {
 
       @include breakpoint(laptop) {
         background: url("../images/bg-pattern-intro.svg") top 0px left 0px no-repeat,
-          linear-gradient(90deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+          linear-gradient(90deg, $bg-very-light-red, $bg-light-red);
         background-size: 300%, 100%;
         background-position: center, 0;
         padding: 6rem 3rem;
@@ -89,7 +90,7 @@ html {
               align-items: center;
               padding: 0 0 20px 0;
               justify-content: center;
-              border-bottom: #efeff1 solid 2px;
+              border-bottom: $neu-grayish-blue solid 1px;
             }
 
             .dropdown-btn {
@@ -112,7 +113,7 @@ html {
                 outline: none;
                 cursor: pointer;
                 @include breakpoint(tablet) {
-                  color: hsl(208, 49%, 24%);
+                  color: $pri-dark-blue;
                   text-align: center;
                   font-size: 20px;
                   width: 150px;
@@ -128,7 +129,7 @@ html {
                   display: inline-block;
                   @include breakpoint(tablet) {
                     path {
-                      stroke: hsl(13, 100%, 72%);
+                      stroke: $pri-light-red;
                     }
                   }
                 }
@@ -142,7 +143,7 @@ html {
                 width: 170px;
                 margin-top: 1rem;
                 position: absolute;
-                background-color: #efeff1;
+                background-color: $light-gray;
                 border-radius: 0.5rem;
                 left: -8px;
                 display: flex;
@@ -179,7 +180,7 @@ html {
                   font-weight: 900;
                 }
                 a {
-                  color: hsl(208, 49%, 24%);
+                  color: $pri-dark-blue;
                   text-decoration: none;
                 }
               }
@@ -207,25 +208,29 @@ html {
             font-weight: 700;
 
             @include breakpoint(tablet) {
-              color: hsl(208, 49%, 24%);
+              color: $pri-dark-blue;
               padding: 20px 0;
             }
 
             &:last-child {
               padding: 0 40px;
-              background-color: rgb(255, 255, 255);
-              color: hsl(356, 100%, 66%);
-              transition: 0.4s;
+              background-color: white;
+              color: $pri-light-red;
+              transition: all 0.4s;
               @include breakpoint(tablet) {
                 color: white;
-                background-color: hsl(356, 100%, 66%);
+                background-color: $bg-light-red;
                 width: 140px;
                 align-self: center;
                 margin-top: 10px;
+
+                &:hover {
+                  background: $pri-very-light-red;
+                }
               }
 
               &:hover {
-                background-color: #ff7b86;
+                background: $pri-very-light-red;
                 color: white;
               }
             }
@@ -280,7 +285,7 @@ html {
             font-weight: 700;
             font-size: 16px;
             background-color: white;
-            color: hsl(356, 100%, 66%);
+            color: $pri-light-red;
             width: 140px;
             height: 50px;
             border: none;
@@ -291,7 +296,7 @@ html {
             margin-top: 40px;
             transition: 0.4s;
             &:hover {
-              background-color: #ff7b86;
+              background-color: $pri-very-light-red;
               color: white;
             }
 
@@ -302,7 +307,7 @@ html {
               margin-left: 0.8rem;
               &:hover {
                 background-color: white;
-                color: #ff7b86;
+                color: $pri-light-red;
               }
             }
           }
@@ -334,20 +339,20 @@ html {
           height: 400px;
           position: relative;
           background: url("../images/bg-pattern-circles.svg") top -500px left -213px no-repeat,
-            linear-gradient(90deg, hsl(237, 17%, 21%), #3e4067);
+            linear-gradient(90deg, $bg-dark-gray-blue, $bg-dark-gry-blue);
           color: white;
 
           @include breakpoint(tablet) {
             height: 625px;
             background: url("../images/bg-pattern-circles.svg") top -240px left -120px no-repeat,
-              linear-gradient(90deg, hsl(237, 17%, 21%), #3e4067);
+              linear-gradient(90deg, $bg-dark-gray-blue, $bg-dark-gry-blue);
             background-size: 160% 100%;
             margin: 160px 0 0px 0;
           }
           @include breakpoint(laptop) {
             height: 500px;
             background: url("../images/bg-pattern-circles.svg") top -550px left -120px no-repeat,
-              linear-gradient(90deg, hsl(237, 17%, 21%), #3e4067);
+              linear-gradient(90deg, $bg-dark-gray-blue, $bg-dark-gry-blue);
             margin: 160px 0 0 0;
           }
           img {
@@ -478,7 +483,7 @@ html {
             margin-left: auto;
             flex: 0.5;
             padding-top: 190px;
-            color: hsl(237, 23%, 32%);
+            color: $bg-dark-gry-blue;
             padding-left: 16.5rem;
 
             @include breakpoint(tablet) {
@@ -491,7 +496,7 @@ html {
             }
 
             h3 {
-              color: hsl(208, 49%, 24%);
+              color: $pri-dark-blue;
               font-size: 29px;
               font-weight: 700;
               &:last-of-type {
@@ -515,7 +520,7 @@ html {
         }
 
         h2 {
-          color: hsl(208, 49%, 24%);
+          color: $pri-dark-blue;
           text-align: center;
           font-size: 4rem;
           font-weight: 700;
@@ -544,7 +549,7 @@ html {
         }
 
         article {
-          color: hsl(237, 23%, 32%);
+          color: $bg-dark-gry-blue;
           padding-left: 16.5rem;
           flex: 1;
           @include breakpoint(tablet) {
@@ -583,7 +588,7 @@ html {
           p {
             padding-top: 2.6rem;
             line-height: 1.8;
-            color: hsl(207, 13%, 34%);
+            color: $neu-dark-grayish-blue;
             letter-spacing: 0.1px;
           }
         }
@@ -622,7 +627,7 @@ html {
   }
 
   footer {
-    background-color: hsl(240, 10%, 16%);
+    background-color: $neu-dark-black-blue;
     width: 1440px;
     margin: auto;
     border-radius: 0 100px 0 0;
@@ -726,7 +731,7 @@ html {
 
             a {
               text-decoration: none;
-              color: hsl(240, 2%, 79%);
+              color: $neu-grayish-blue;
             }
             &:hover {
               text-decoration: underline;
@@ -755,7 +760,7 @@ html {
       a {
         font-style: normal;
         text-decoration: none;
-        color: hsl(13, 100%, 72%);
+        color: $bg-very-light-red;
       }
     }
   }
