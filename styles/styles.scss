@@ -69,7 +69,6 @@ html {
             display: none;
             width: calc(100% - 60px);
             flex-direction: column;
-            // background-color: rgb(114, 114, 114);
             box-shadow: 0 1px 20px 0 #3b3b3b;
             background-color: white;
             border-radius: 5px;
@@ -318,19 +317,20 @@ html {
       position: relative;
 
       section {
-        height: 855px;
         width: 100%;
         border-radius: 0 100px 0 100px;
+        margin: 160px 0 240px 0;
 
         @include breakpoint(tablet) {
-          height: 1460px;
+          margin: 105px 0 230px 0;
         }
         @include breakpoint(laptop) {
-          height: 1160px;
+          margin: 105px 0 230px 0;
         }
 
         &:nth-child(2) {
           width: 100%;
+          margin: 160px 0 115px 0;
           height: 400px;
           position: relative;
           background: url("../images/bg-pattern-circles.svg") top -500px left -213px no-repeat,
@@ -342,9 +342,13 @@ html {
             background: url("../images/bg-pattern-circles.svg") top -240px left -120px no-repeat,
               linear-gradient(90deg, hsl(237, 17%, 21%), #3e4067);
             background-size: 160% 100%;
+            margin: 160px 0 0px 0;
           }
           @include breakpoint(laptop) {
-            height: 625px;
+            height: 500px;
+            background: url("../images/bg-pattern-circles.svg") top -550px left -120px no-repeat,
+              linear-gradient(90deg, hsl(237, 17%, 21%), #3e4067);
+            margin: 160px 0 0 0;
           }
           img {
             width: 552px;
@@ -365,7 +369,6 @@ html {
               width: auto;
               height: 450px;
               top: -185px;
-              left: 0px;
               display: block;
               margin: auto;
             }
@@ -374,8 +377,15 @@ html {
             margin-left: auto;
             width: 50%;
             padding-left: 15px;
+            padding-bottom: 90px;
 
             @include breakpoint(tablet) {
+              margin-right: auto;
+              padding-left: 4.5rem;
+              width: 100%;
+              padding-top: 130px;
+            }
+            @include breakpoint(laptop) {
               margin-right: auto;
               padding-left: 4.5rem;
               width: 100%;
@@ -387,9 +397,15 @@ html {
               font-size: 4rem;
               font-weight: 700;
               color: white;
+              padding-top: 120px;
 
               @include breakpoint(tablet) {
                 text-align: center;
+                padding-top: 120px;
+              }
+              @include breakpoint(laptop) {
+                text-align: center;
+                padding-top: 120px;
               }
             }
             p {
@@ -404,24 +420,27 @@ html {
                 padding-right: 0;
                 letter-spacing: normal;
               }
+              @include breakpoint(laptop) {
+                text-align: center;
+                padding-right: 0;
+                letter-spacing: normal;
+              }
             }
           }
         }
 
         &:last-of-type {
-          height: 1020px;
-          padding-top: 115px;
           display: flex;
-          margin-left: auto;
+          margin: 0 0 290px 0;
 
           @include breakpoint(tablet) {
-            flex-direction: column;
-            padding-top: 60px;
+            display: block;
+            margin: 70px 0 0px 0;
           }
 
           @include breakpoint(laptop) {
-            flex-direction: column;
-            padding-top: 20px;
+            display: block;
+            margin: 70px 0 0px 0;
           }
 
           .laptop__illustration {
@@ -442,13 +461,15 @@ html {
               margin: auto;
               height: 380px;
               width: 100%;
+              overflow-x: none;
             }
             @include breakpoint(laptop) {
               background: url("../images/illustration-laptop-mobile.svg") center no-repeat;
+              background-size: 65%;
               position: static;
               display: block;
               margin: auto;
-              height: 360px;
+              height: 500px;
               width: 100%;
             }
           }
@@ -498,11 +519,12 @@ html {
           text-align: center;
           font-size: 4rem;
           font-weight: 700;
-          padding-top: 125px;
 
           @include breakpoint(tablet) {
             font-size: 2.7rem;
-            padding-top: 100px;
+          }
+          @include breakpoint(laptop) {
+            font-size: 3.5rem;
           }
         }
         .editor-desktop {
@@ -602,11 +624,10 @@ html {
   footer {
     background-color: hsl(240, 10%, 16%);
     width: 1440px;
-    height: 360px;
     margin: auto;
     border-radius: 0 100px 0 0;
     color: white;
-    padding: 7rem 16.5rem;
+    padding: 7rem 16.5rem 3rem 16.5rem;
 
     @include breakpoint(tablet) {
       height: 950px;
@@ -617,6 +638,7 @@ html {
     @include breakpoint(laptop) {
       width: 100%;
       padding: 0;
+      padding: 0rem 7.5rem 0rem 7.5rem;
       margin-top: 100px;
     }
 
@@ -637,11 +659,14 @@ html {
       }
       @include breakpoint(laptop) {
         display: flex;
+        flex-direction: column;
+        justify-content: center;
         .logo {
           height: auto;
           width: 100px;
           margin: auto;
           padding-top: 75px;
+          align-self: center;
         }
       }
 
@@ -655,6 +680,11 @@ html {
           flex-direction: column;
           padding-top: 30px;
         }
+        @include breakpoint(laptop) {
+          justify-content: space-between;
+          flex-direction: row;
+          padding: 30px 120px 0 120px;
+        }
 
         ul {
           padding-top: 8px;
@@ -667,6 +697,10 @@ html {
             text-align: center;
             font-size: 1.8rem;
           }
+          @include breakpoint(laptop) {
+            margin-right: 0px;
+            text-align: center;
+          }
 
           li {
             font-weight: 400;
@@ -675,6 +709,11 @@ html {
             @include breakpoint(tablet) {
               font-size: 1.8rem;
               padding-top: 1rem;
+            }
+            @include breakpoint(laptop) {
+              font-size: 1.8rem;
+              padding-top: 1rem;
+              text-align: center;
             }
 
             &:first-child {
@@ -705,6 +744,11 @@ html {
 
       @include breakpoint(tablet) {
         padding-top: 60px;
+        font-size: 1.2rem;
+      }
+      @include breakpoint(laptop) {
+        padding-top: 60px;
+        padding-bottom: 20px;
         font-size: 1.2rem;
       }
 
