@@ -42,7 +42,6 @@ document.addEventListener("mouseup", e => {
     if (item.parentNode && item != e.target) {
       item.nextElementSibling.classList.remove("opened");
       item.children[0].classList.remove("rotate");
-      console.log("close");
     }
   });
 });
